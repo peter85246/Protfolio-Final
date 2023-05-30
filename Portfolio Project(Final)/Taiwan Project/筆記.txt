@@ -1,0 +1,90 @@
+index.html :
+<!--按下驚嘆號(!)就可以寫出1~9行--必須code-->
+<!--utf-8 避免亂碼產生 (自動翻譯文字)-->
+<!--width 寬度不變, initial-scale=1 規模不變(不放大縮小)-->
+<!--meta標籤運用-->
+<!--base tag, target 連結顯示於新分頁指令-->
+<!--img=image(照片code), src=source → ./--(.slash)照片選擇路徑 也可直接貼上圖片網址, alt=alternative(另類名稱定義)-->
+<!-- 重要: Relative File Path(相對位置 File Path) → .指令代表目前html文件所在資料夾位置。 ..指令代表最上層資料夾位置。-->
+<!--li為新增列表欄位-->
+<!--ol列表為 1. 2. 3.排列， ul為 ● ● ● 排列以此類推-->
+<!--colspan裡面的數字為X，等於推進了X格(X格的寬度)-->
+<!--HTML做出Table表格必要四元素 = <table>, <tr>, <th>, <td>。 tr=table row, th=table heading, td=table data-->
+<!--row為橫向, column為縱向。 th為標題, td為每個標題下的數據--><!--thead, tbody, tfoot指令為方便其他人閱讀 code-->
+<!--href == 路徑(./image, www.google..., https//...)
+
+myForm.html :
+form -- 表單
+action:資料目的地
+<!--GET輸入會顯示於網址路徑上，POST則不會，說明POST更適合用於帳號密碼網頁，避免帳密外洩-->
+<!--action指定資料目的地(後端的部分)，method預設為GET如需設定GET可不填，若想更改為POST則輸入POST-->
+<!--file指令為架構(傳輸檔案)到網頁端指令-->
+<!--label & input為相互配合，點選label for，input id也會跟著一起被全選，" "裡面value須一致(增加使用者體驗)-->
+<!--name=""裡面的value名稱為可用於檢視有無傳輸資料到後端-->
+<!--br, hr。br == 段落指令，hr == 分隔線-->
+<!--select下拉式選單指令-->
+<!--radio 指定選項只能選一個-->
+<!--placeholder 空格加入文字-->
+<!--required為指定必須輸入value & 不能選擇空白選項，否則不予執行-->
+<!--min設定最小值，max設定最大值(min&max是給數字做使用的)。step為單位輸入值，有些設定需求小數點則可方便使用(Ex.0.01 → 10, 10.01, 10.02 …)--><!--step="0.01"-->
+<!--checkbox為框框勾選(Ex.訂閱熊貓電子報的打勾選項)，checked為預設已打勾的指令-->
+<!--password 顯示密碼為黑點 ●，防止密碼輸入時偷看外洩。minlength & maxlength為value限定大小值(是給文字用的)。-->
+<!--Div 往下排列展示(非並排)-->
+
+
+<!--整理!! == checked 用於 radio, checkbox。
+              min, max 用於 number, range。
+              minlength, maxlength 用於 text, password
+              placeholder, required, value 則全都可通用 
+              特定例外 == value 一定要做設定: radio, checkbox，不一定要做設定: text, number-->
+
+CSS :
+<!--link連結CSS (Style)更改標題顏色-->
+<!--Comment註解快捷鍵 == 選取註解文字, Ctrl+/ == <!---->。 CSS Comment 則跟 Java 一樣 /**/
+<!--* 在CSS裡代表所有標籤-->
+/* flex-grow: 寬度隨網頁大小改變 & flex-basis: 寬度最小值 */
+
+<!--重點(背起來)
+    inline styling > id > class > element selector > inheritance
+    以上均符合 1.Cascade(階層), 2.Specificity(特定度), Inheritance(繼承), 三項條件
+-->
+
+Ex. 
+    *{
+
+     }
+
+<!--一個標籤可以擁有兩個以上的類別(class), 但id只能有一個。class=""可做為分類使用-->
+
+/* Color Change Codes & Comment Demonstration */
+/*Element Selector*/
+Ex.
+    h1 {
+        color: rgba(2, 129, 2, 0.8);
+    }
+    h2 {
+        color: brown;
+    }
+    p {
+        color: peru;
+    }
+
+/* Grouping Selector == 以.來呼叫類別關鍵字 */
+/* Descendant(後裔) Selector == 子母概念 */
+/* div 下面的類別 link1, link2 的 a 標籤 */
+Ex.
+    div.link1 a {
+        color: red;
+    }
+    div.link2 a {
+        color: blue;
+    }
+
+
+    /* (背)inline block == 隨頁面放大縮小
+        1.在網頁上排版 → inline element (左→右)
+        2.在width, height → block element (寬, 高)
+    (5個標籤:img, input, button, select, textarea，皆屬於inline block)
+    width: 20vw;
+    height: 500px;
+    */
